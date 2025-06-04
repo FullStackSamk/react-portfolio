@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="flex items-center">
             {/* Website Logo */}
             <a href="#" className="flex items-center py-4 px-2">
-              <span className="font-semibold text-white text-lg hover:text-red-500">REACT PORTFOLIO.</span>
+              <span className="font-semibold text-white text-lg hover:text-red-500">CANTECH IT SERVICES.</span>
             </a>
           </div>
           {/* Primary Navbar items */}
