@@ -5,7 +5,43 @@ const HeroSection = () => {
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
   const [blink, setBlink] = useState(true);
-  const words = ['BTB', 'BTC', 'SASS'];
+  const words = [
+  'React',
+  'Angular',
+  'Vue.js',
+  'Next.js',
+  'JavaScript',
+  'TypeScript',
+  'HTML5',
+  'CSS3',
+  'Tailwind CSS',
+  'Redux',
+  'Node.js',
+  'Express.js',
+  'NestJS',
+  'GraphQL',
+  'REST APIs',
+  'Python',
+  'Django',
+  'Flask',
+  'Java',
+  'Spring Boot',
+  'C#',
+  '.NET Core',
+  'Ruby on Rails',
+  'PHP',
+  'Laravel',
+  'MySQL',
+  'PostgreSQL',
+  'MongoDB',
+  'Redis',
+  'Docker',
+  'Kubernetes',
+  'AWS',
+  'Azure',
+  'GCP'
+];
+
 
   // Typing effect
   useEffect(() => {
@@ -37,14 +73,13 @@ const HeroSection = () => {
 
   return (
     <div className="text-center p-20 bg-pink-600 text-white">
-      <h1 className="text-5xl font-bold mb-4">Transform Your Data into Actionable Insights.</h1>
-      <p className="text-xl mb-8">Empowering Your Business with Advanced Data Analytics Solutions</p>
+      <h1 className="text-5xl font-bold mb-4">Empowering Your IT Journey with Expert Consulting and Training</h1>
+      <p className="text-xl mb-8">Elevate your team's capabilities with industry-leading guidance and specialized training solutions.</p>
       <p className="mb-12">
-        Monitor your data analytics to increase revenue for{' '}
+        Master the latest technologies and frameworks:{' '}
         <span className="inline-block">
           {`${words[wordIndex].substring(0, subIndex)}${blink ? '|' : ' '}`}
         </span>{' '}
-        platforms.
       </p>
       <button className="bg-green-500 px-6 py-2 rounded text-white font-bold hover:bg-green-700 transition duration-300">
         Get Started
