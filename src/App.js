@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Navbar from "./components/Navbar";
+import ScrollProgress from "./components/ScrollProgress";
 import HeroSection from "./components/HeroSection";
 import FeatureCarousel from "./components/FeatureCarousel";
 import NewsletterSignup from "./components/NewsletterSignup";
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div className="App min-h-screen flex flex-col">
+      <ScrollProgress />
       <Navbar />
       <div className="flex-grow">
         <TransitionGroup>
