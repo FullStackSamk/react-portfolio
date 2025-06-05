@@ -25,29 +25,35 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="App">
+    <div className="App min-h-screen flex flex-col">
       <Navbar />
-      <TransitionGroup>
-        <CSSTransition key={location.pathname} classNames="fade" timeout={300}>
-          <Routes location={location}>
-            <Route
-              path="/"
-              element={
-                <>
-                  <HeroSection />
-                  <FeatureCarousel />
-                  <NewsletterSignup />
-                  <Footer />
-                </>
-              }
-            />
-            <Route path="/services" element={<Services />} />
-            <Route path="/why-us" element={<WhyUs />} />
-            <Route path="/training" element={<Training />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </CSSTransition>
-      </TransitionGroup>
+      <div className="flex-grow">
+        <TransitionGroup>
+          <CSSTransition
+            key={location.pathname}
+            classNames="fade"
+            timeout={300}
+          >
+            <Routes location={location}>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <HeroSection />
+                    <FeatureCarousel />
+                    <NewsletterSignup />
+                  </>
+                }
+              />
+              <Route path="/services" element={<Services />} />
+              <Route path="/why-us" element={<WhyUs />} />
+              <Route path="/training" element={<Training />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </CSSTransition>
+        </TransitionGroup>
+      </div>
+      <Footer />
     </div>
   );
 }
