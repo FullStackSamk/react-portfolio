@@ -9,7 +9,7 @@ import HeroSection from "./components/HeroSection";
 import FeatureCarousel from "./components/FeatureCarousel";
 import NewsletterSignup from "./components/NewsletterSignup";
 import Footer from "./components/Footer";
-
+import SAM from "./pages/SAM";
 import Services from "./pages/Services";
 import WhyUs from "./pages/WhyUs";
 import Training from "./pages/Training";
@@ -48,6 +48,7 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/why-us" element={<WhyUs />} />
               <Route path="/training" element={<Training />} />
+              <Route path="/sam" element={<SAM />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </CSSTransition>
