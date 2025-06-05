@@ -26,11 +26,6 @@ const SAM = () => {
 
   return (
     <div ref={containerRef} className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      {/* Progress bar */}
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-emerald-500"
-        style={{ scaleX }}
-      />
 
       {/* Hero Section */}
       <div className="relative h-screen flex items-center justify-center overflow-hidden">
