@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import "./App.css"; // for transition styles
+import React, { useEffect, Suspense, lazy } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import "./utils/three-setup";
 
 import Navbar from "./components/Navbar";
 import ScrollProgress from "./components/ScrollProgress";
@@ -15,8 +17,7 @@ import Services from "./pages/Services";
 import WhyUs from "./pages/WhyUs";
 import Training from "./pages/Training";
 import NotFound from "./pages/NotFound";
-
-import "./App.css"; // for transition styles
+const Contact = lazy(() => import("./pages/Contact"));
 
 const App = () => {
   useEffect(() => {
@@ -51,6 +52,18 @@ const App = () => {
               <Route path="/why-us" element={<WhyUs />} />
               <Route path="/training" element={<Training />} />
               <Route path="/sam" element={<SAM />} />
+              <Route
+                path="/contact"
+                element={
+                  <Suspense
+                    fallback={
+                      <div className="text-center pt-20">Loading...</div>
+                    }
+                  >
+                    <Contact />
+                  </Suspense>
+                }
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </CSSTransition>
@@ -59,6 +72,6 @@ const App = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
