@@ -4,7 +4,14 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { useEffect } from "react";
 
-const features = [
+interface Feature {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+const features: Feature[] = [
   {
     title: "Services We Offer",
     description: "Explore our IT training, software consulting, DevOps, and cloud services.",

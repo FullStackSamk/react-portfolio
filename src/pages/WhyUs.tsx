@@ -3,8 +3,7 @@ import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import whyImg from "../images/why-us.png";
 
-const reasons = [
-  "10+ years of hands-on development expertise",
+const reasons: string[] = [
   "Tailor-made solutions that scale with your business",
   "Proven success delivering training to global teams",
   "Full spectrum knowledge from UI to cloud infrastructure",

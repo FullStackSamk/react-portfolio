@@ -5,13 +5,13 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const getNavLinkClass = (path) => {
+  const getNavLinkClass = (path: string) => {
     return location.pathname === path
       ? "py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold"
       : "py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300";
   };
 
-  const getMobileNavLinkClass = (path) => {
+  const getMobileNavLinkClass = (path: string) => {
     return location.pathname === path
       ? "block py-2 px-4 text-sm bg-green-500 text-white"
       : "block py-2 px-4 text-sm hover:bg-green-500 transition duration-300";

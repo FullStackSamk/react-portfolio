@@ -1,20 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
-const SAM = () => {
-  const [activeSection, setActiveSection] = useState('skills');
-  const containerRef = useRef(null);
+const SAM = (): JSX.Element => {
+  const [activeSection, setActiveSection] = useState<string>('skills');
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress);
 
-  const skills = [
+interface SkillCategory { name: string; items: string[]; icon: string; }
+const skills: SkillCategory[] = [
     { name: 'Frontend', items: ['React', 'Angular', 'Vue.js', 'Next.js'], icon: '🎨' },
     { name: 'Backend', items: ['Node.js', 'Python', 'Java', '.NET'], icon: '⚙️' },
     { name: 'Database', items: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis'], icon: '🗄️' },
     { name: 'Cloud', items: ['AWS', 'Azure', 'GCP', 'Docker'], icon: '☁️' },
   ];
 
-  const projects = [
+interface Project { title: string; description: string; tech: string[]; image: string; }
+const projects: Project[] = [
     {
       title: "Project Alpha",
       description: "A revolutionary web application",

@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
-  const [wordIndex, setWordIndex] = useState(0);
-  const [subIndex, setSubIndex] = useState(0);
-  const [reverse, setReverse] = useState(false);
-  const [blink, setBlink] = useState(true);
-  const words = [
+  const [wordIndex, setWordIndex] = useState<number>(0);
+  const [subIndex, setSubIndex] = useState<number>(0);
+  const [reverse, setReverse] = useState<boolean>(false);
+  const [blink, setBlink] = useState<boolean>(true);
+  const words: string[] = [
   'React',
   'Angular',
   'Vue.js',
@@ -59,7 +59,11 @@ const HeroSection = () => {
 
     const timeout = setTimeout(() => {
       setSubIndex((prev) => prev + (reverse ? -1 : 1));
-    }, Math.max(reverse ? 75 : subIndex === words[wordIndex].length ? 1000 : 150, parseInt(Math.random() * 350)));
+    },
+    Math.max(
+      reverse ? 75 : subIndex === words[wordIndex].length ? 1000 : 150,
+      Math.floor(Math.random() * 350)
+    ));
 
     return () => clearTimeout(timeout);
   }, [subIndex, reverse, wordIndex]);
