@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -15,6 +15,7 @@ import Services from "./pages/Services";
 import WhyUs from "./pages/WhyUs";
 import Training from "./pages/Training";
 import NotFound from "./pages/NotFound";
+const Contact = lazy(() => import("./pages/Contact"));
 
 import "./App.css"; // for transition styles
 
@@ -51,6 +52,14 @@ const App = () => {
               <Route path="/why-us" element={<WhyUs />} />
               <Route path="/training" element={<Training />} />
               <Route path="/sam" element={<SAM />} />
+              <Route
+                path="/contact"
+                element={
+                  <Suspense fallback={<div className="text-center pt-20">Loading...</div>}>
+                    <Contact />
+                  </Suspense>
+                }
+              />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </CSSTransition>
