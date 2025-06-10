@@ -1,9 +1,14 @@
 import React from "react";
-
+import { IconType } from "react-icons";
 import { FaLaptopCode, FaChalkboardTeacher, FaUsers } from "react-icons/fa";
 import trainingImg from "../images/corporate-training.png";
 
-const modules = [
+interface Module {
+  icon: IconType;
+  title: string;
+}
+
+const modules: Module[] = [
   { icon: FaLaptopCode, title: "Modern Web Stacks" },
   { icon: FaChalkboardTeacher, title: "Live Workshops" },
   { icon: FaUsers, title: "Team Mentorship" },

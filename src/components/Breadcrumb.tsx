@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const Breadcrumb = () => {
+const Breadcrumb = (): JSX.Element => {
   const { pathname } = useLocation();
   const pathParts = pathname.split("/").filter(Boolean);
 

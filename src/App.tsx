@@ -18,7 +18,7 @@ import NotFound from "./pages/NotFound";
 
 import "./App.css"; // for transition styles
 
-function App() {
+const App = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);

@@ -11,9 +11,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const techStack = ["React", "Node.js", "Airflow", "AWS Glue", "Kubernetes"];
+const techStack: string[] = ["React", "Node.js", "Airflow", "AWS Glue", "Kubernetes"];
 
-const chartData = [
+const chartData: { day: string; visitors: number; conversions: number }[] = [
   { day: "Mon", visitors: 1200, conversions: 300 },
   { day: "Tue", visitors: 1400, conversions: 350 },
   { day: "Wed", visitors: 1000, conversions: 280 },
@@ -22,7 +22,7 @@ const chartData = [
 ];
 
 const DataAnalyticsSection = () => {
-  const [startTransition, setStartTransition] = useState(false);
+  const [startTransition, setStartTransition] = useState<boolean>(false);
 
   useEffect(() => {
     AOS.init({ duration: 1000 });

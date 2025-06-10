@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 const NewsletterSignup = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState<string>('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle the newsletter sign up logic here
     // For example, you could send the email to your server or a third-party email service provider

@@ -3,26 +3,27 @@ import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import servicesImg from "../images/services-we-offer.png";
 
-const offerings = [
+interface Offering {
+  title: string;
+  description: string;
+}
+
+const offerings: Offering[] = [
   {
     title: "Web Development",
-    description:
-      "Modern responsive applications built with the latest frameworks.",
+    description: "Modern responsive applications built with the latest frameworks.",
   },
   {
     title: "Cloud & DevOps",
-    description:
-      "CI/CD pipelines, container orchestration and infrastructure guidance.",
+    description: "CI/CD pipelines, container orchestration and infrastructure guidance.",
   },
   {
     title: "UI/UX Consulting",
-    description:
-      "Design systems and accessibility reviews for delightful experiences.",
+    description: "Design systems and accessibility reviews for delightful experiences.",
   },
   {
     title: "Technical Training",
-    description:
-      "Hands-on workshops tailored for your engineering teams.",
+    description: "Hands-on workshops tailored for your engineering teams.",
   },
 ];
 
