@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "https://FullStackSamk.github.io/react-portfolio",
   "dependencies": {
-    "@react-three/drei": "^9.67.0",
-    "@react-three/fiber": "^8.18.0",
+    "@react-three/drei": "^9.75.0",
+    "@react-three/fiber": "^8.13.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -21,7 +21,7 @@
     "react-transition-group": "^4.4.5",
     "recharts": "^2.15.3",
     "tailwindcss": "^3.3.6",
-    "three": "^0.177.0",
+    "three": "^0.150.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -55,6 +55,7 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@types/react-router-dom": "^5.3.3",
+    "@types/three": "^0.177.0",
     "gh-pages": "^6.1.0",
     "typescript": "^4.9.5"
   }
